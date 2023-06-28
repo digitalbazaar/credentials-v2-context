@@ -64,11 +64,6 @@ module.exports = function(config) {
             loader: 'json-loader'
           }
         ]
-      },
-      node: {
-        Buffer: false,
-        crypto: false,
-        util: false
       }
     }
   });
