@@ -54,7 +54,14 @@ module.exports = function(config) {
 
     webpack: {
       devtool: 'inline-source-map',
-      mode: 'development'
+      mode: 'development',
+      resolve: {
+        fallback: {
+          buffer: false,
+          util: false,
+          crypto: false
+        }
+      }
     }
   });
 };
