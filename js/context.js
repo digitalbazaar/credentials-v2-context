@@ -55,7 +55,7 @@ module.exports = {
           '@type': '@id'
         },
         name: {
-          '@id': 'https://schema.org/description',
+          '@id': 'https://schema.org/name',
           '@type': 'http://www.w3.org/2001/XMLSchema#string'
         },
         proof: {
