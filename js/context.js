@@ -31,8 +31,7 @@ module.exports = {
           '@type': '@id'
         },
         description: {
-          '@id': 'https://schema.org/description',
-          '@type': 'http://www.w3.org/2001/XMLSchema#string'
+          '@id': 'https://schema.org/description'
         },
         evidence: {
           '@id': 'https://www.w3.org/2018/credentials#evidence',
