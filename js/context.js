@@ -56,7 +56,6 @@ module.exports = {
         },
         name: {
           '@id': 'https://schema.org/name'
-          '@type': 'http://www.w3.org/2001/XMLSchema#string'
         },
         proof: {
           '@id': 'https://w3id.org/security#proof',
