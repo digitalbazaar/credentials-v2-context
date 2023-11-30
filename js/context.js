@@ -3,164 +3,303 @@
  */
 'use strict';
 
-module.exports = {
-  '@context': {
-    '@protected': true,
+module.exports =
+/* inline JSON context */
+/* eslint-disable quotes, quote-props, max-len */
+{
+  "@context": {
+    "@protected": true,
+    "@vocab": "https://www.w3.org/ns/credentials/issuer-dependent#",
 
-    id: '@id',
-    type: '@type',
+    "id": "@id",
+    "type": "@type",
 
-    VerifiableCredential: {
-      '@id': 'https://www.w3.org/2018/credentials#VerifiableCredential',
-      '@context': {
-        '@protected': true,
+    "kid": {
+      "@id": "https://www.iana.org/assignments/jose#kid",
+      "@type": "@id"
+    },
+    "iss": {
+      "@id": "https://www.iana.org/assignments/jose#iss",
+      "@type": "@id"
+    },
+    "sub": {
+      "@id": "https://www.iana.org/assignments/jose#sub",
+      "@type": "@id"
+    },
+    "jku": {
+      "@id": "https://www.iana.org/assignments/jose#jku",
+      "@type": "@id"
+    },
+    "x5u": {
+      "@id": "https://www.iana.org/assignments/jose#x5u",
+      "@type": "@id"
+    },
+    "aud": {
+      "@id": "https://www.iana.org/assignments/jwt#aud",
+      "@type": "@id"
+    },
+    "exp": {
+      "@id": "https://www.iana.org/assignments/jwt#exp",
+      "@type": "https://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+    },
+    "nbf": {
+      "@id": "https://www.iana.org/assignments/jwt#nbf",
+      "@type": "https://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+    },
+    "iat": {
+      "@id": "https://www.iana.org/assignments/jwt#iat",
+      "@type": "https://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+    },
+    "cnf": {
+      "@id": "https://www.iana.org/assignments/jwt#cnf",
+      "@context": {
+        "@protected": true,
+        "kid": {
+          "@id": "https://www.iana.org/assignments/jwt#kid",
+          "@type": "@id"
+        },
+        "jwk": {
+          "@id": "https://www.iana.org/assignments/jwt#jwk",
+          "@type": "@json"
+        }
+      }
+    },
+    "_sd_alg": {
+      "@id": "https://www.iana.org/assignments/jwt#_sd_alg"
+    },
+    "_sd": {
+      "@id": "https://www.iana.org/assignments/jwt#_sd"
+    },
+    "...": {
+      "@id": "https://www.iana.org/assignments/jwt#..."
+    },
 
-        id: '@id',
-        type: '@type',
+    "digestSRI": {
+      "@id": "https://www.w3.org/2018/credentials#digestSRI",
+      "@type": "https://www.w3.org/2018/credentials#sriString"
+    },
+    "mediaType": {
+      "@id": "https://schema.org/encodingFormat"
+    },
 
-        credentialSchema: {
-          '@id': 'https://www.w3.org/2018/credentials#credentialSchema',
-          '@type': '@id'
+    "description": "https://schema.org/description",
+    "name": "https://schema.org/name",
+
+    "VerifiableCredential": {
+      "@id": "https://www.w3.org/2018/credentials#VerifiableCredential",
+      "@context": {
+        "@protected": true,
+
+        "id": "@id",
+        "type": "@type",
+
+        "credentialSchema": {
+          "@id": "https://www.w3.org/2018/credentials#credentialSchema",
+          "@type": "@id"
         },
-        credentialStatus: {
-          '@id': 'https://www.w3.org/2018/credentials#credentialStatus',
-          '@type': '@id'
+        "credentialStatus": {
+          "@id": "https://www.w3.org/2018/credentials#credentialStatus",
+          "@type": "@id"
         },
-        credentialSubject: {
-          '@id': 'https://www.w3.org/2018/credentials#credentialSubject',
-          '@type': '@id'
+        "credentialSubject": {
+          "@id": "https://www.w3.org/2018/credentials#credentialSubject",
+          "@type": "@id"
         },
-        description: {
-          '@id': 'https://schema.org/description'
+        "evidence": {
+          "@id": "https://www.w3.org/2018/credentials#evidence",
+          "@type": "@id"
         },
-        evidence: {
-          '@id': 'https://www.w3.org/2018/credentials#evidence',
-          '@type': '@id'
+        "validFrom": {
+          "@id": "https://www.w3.org/2018/credentials#validFrom",
+          "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
         },
-        holder: {
-          '@id': 'https://www.w3.org/2018/credentials#holder',
-          '@type': '@id'
+        "validUntil": {
+          "@id": "https://www.w3.org/2018/credentials#validUntil",
+          "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
         },
-        validFrom: {
-          '@id': 'https://www.w3.org/2018/credentials#validFrom',
-          '@type': 'http://www.w3.org/2001/XMLSchema#dateTime'
+        "issuer": {
+          "@id": "https://www.w3.org/2018/credentials#issuer",
+          "@type": "@id"
         },
-        validUntil: {
-          '@id': 'https://www.w3.org/2018/credentials#validUntil',
-          '@type': 'http://www.w3.org/2001/XMLSchema#dateTime'
+        "proof": {
+          "@id": "https://w3id.org/security#proof",
+          "@type": "@id",
+          "@container": "@graph"
         },
-        issuer: {
-          '@id': 'https://www.w3.org/2018/credentials#issuer',
-          '@type': '@id'
+        "refreshService": {
+          "@id": "https://www.w3.org/2018/credentials#refreshService",
+          "@type": "@id"
         },
-        name: {
-          '@id': 'https://schema.org/name'
+        "termsOfUse": {
+          "@id": "https://www.w3.org/2018/credentials#termsOfUse",
+          "@type": "@id"
         },
-        proof: {
-          '@id': 'https://w3id.org/security#proof',
-          '@type': '@id',
-          '@container': '@graph'
+        "confidenceMethod": {
+          "@id": "https://www.w3.org/2018/credentials#confidenceMethod",
+          "@type": "@id"
         },
-        refreshService: {
-          '@id': 'https://www.w3.org/2018/credentials#refreshService',
-          '@type': '@id'
-        },
-        termsOfUse: {
-          '@id': 'https://www.w3.org/2018/credentials#termsOfUse',
-          '@type': '@id'
+        "relatedResource": {
+          "@id": "https://www.w3.org/2018/credentials#relatedResource",
+          "@type": "@id"
         }
       }
     },
 
-    VerifiablePresentation: {
-      '@id': 'https://www.w3.org/2018/credentials#VerifiablePresentation',
-      '@context': {
-        '@protected': true,
+    "VerifiablePresentation": {
+      "@id": "https://www.w3.org/2018/credentials#VerifiablePresentation",
+      "@context": {
+        "@protected": true,
 
-        id: '@id',
-        type: '@type',
-        holder: {
-          '@id': 'https://www.w3.org/2018/credentials#holder',
-          '@type': '@id'
+        "id": "@id",
+        "type": "@type",
+        "holder": {
+          "@id": "https://www.w3.org/2018/credentials#holder",
+          "@type": "@id"
         },
-        termsOfUse: {
-          '@id': 'https://www.w3.org/2018/credentials#termsOfUse',
-          '@type': '@id'
+        "proof": {
+          "@id": "https://w3id.org/security#proof",
+          "@type": "@id",
+          "@container": "@graph"
         },
-        proof: {
-          '@id': 'https://w3id.org/security#proof',
-          '@type': '@id',
-          '@container': '@graph'
+        "verifiableCredential": {
+          "@id": "https://www.w3.org/2018/credentials#verifiableCredential",
+          "@type": "@id",
+          "@container": "@graph",
+          "@context": null
         },
-        verifiableCredential: {
-          '@id': 'https://www.w3.org/2018/credentials#verifiableCredential',
-          '@type': '@id',
-          '@container': '@graph'
+        "termsOfUse": {
+          "@id": "https://www.w3.org/2018/credentials#termsOfUse",
+          "@type": "@id"
         }
       }
     },
 
-    DataIntegrityProof: {
-      '@id': 'https://w3id.org/security#DataIntegrityProof',
-      '@context': {
-        '@protected': true,
-        id: '@id',
-        type: '@type',
-        challenge: 'https://w3id.org/security#challenge',
-        created: {
-          '@id': 'http://purl.org/dc/terms/created',
-          '@type': 'http://www.w3.org/2001/XMLSchema#dateTime'
+    "JsonSchemaCredential": "https://w3.org/2018/credentials#JsonSchemaCredential",
+
+    "JsonSchema": {
+      "@id": "https://w3.org/2018/credentials#JsonSchema",
+      "@context": {
+        "@protected": true,
+
+        "id": "@id",
+        "type": "@type",
+
+        "jsonSchema": {
+          "@id": "https://w3.org/2018/credentials#jsonSchema",
+          "@type": "@json"
+        }
+      }
+    },
+
+    "StatusList2021Credential":
+      "https://w3id.org/vc/status-list#StatusList2021Credential",
+
+    "StatusList2021": {
+      "@id":
+        "https://w3id.org/vc/status-list#StatusList2021",
+      "@context": {
+        "@protected": true,
+
+        "id": "@id",
+        "type": "@type",
+
+        "statusPurpose":
+          "https://w3id.org/vc/status-list#statusPurpose",
+        "encodedList": "https://w3id.org/vc/status-list#encodedList"
+      }
+    },
+
+    "StatusList2021Entry": {
+      "@id":
+        "https://w3id.org/vc/status-list#StatusList2021Entry",
+      "@context": {
+        "@protected": true,
+
+        "id": "@id",
+        "type": "@type",
+
+        "statusPurpose":
+          "https://w3id.org/vc/status-list#statusPurpose",
+        "statusListIndex":
+          "https://w3id.org/vc/status-list#statusListIndex",
+        "statusListCredential": {
+          "@id":
+            "https://w3id.org/vc/status-list#statusListCredential",
+          "@type": "@id"
+        }
+      }
+    },
+
+    "DataIntegrityProof": {
+      "@id": "https://w3id.org/security#DataIntegrityProof",
+      "@context": {
+        "@protected": true,
+        "id": "@id",
+        "type": "@type",
+        "challenge": "https://w3id.org/security#challenge",
+        "created": {
+          "@id": "http://purl.org/dc/terms/created",
+          "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
         },
-        domain: 'https://w3id.org/security#domain',
-        expires: {
-          '@id': 'https://w3id.org/security#expiration',
-          '@type': 'http://www.w3.org/2001/XMLSchema#dateTime'
+        "domain": "https://w3id.org/security#domain",
+        "expires": {
+          "@id": "https://w3id.org/security#expiration",
+          "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
         },
-        nonce: 'https://w3id.org/security#nonce',
-        proofPurpose: {
-          '@id': 'https://w3id.org/security#proofPurpose',
-          '@type': '@vocab',
-          '@context': {
-            '@protected': true,
-            id: '@id',
-            type: '@type',
-            assertionMethod: {
-              '@id': 'https://w3id.org/security#assertionMethod',
-              '@type': '@id',
-              '@container': '@set'
+        "nonce": "https://w3id.org/security#nonce",
+        "previousProof": {
+          "@id": "https://w3id.org/security#previousProof",
+          "@type": "@id"
+        },
+        "proofPurpose": {
+          "@id": "https://w3id.org/security#proofPurpose",
+          "@type": "@vocab",
+          "@context": {
+            "@protected": true,
+            "id": "@id",
+            "type": "@type",
+            "assertionMethod": {
+              "@id": "https://w3id.org/security#assertionMethod",
+              "@type": "@id",
+              "@container": "@set"
             },
-            authentication: {
-              '@id': 'https://w3id.org/security#authenticationMethod',
-              '@type': '@id',
-              '@container': '@set'
+            "authentication": {
+              "@id": "https://w3id.org/security#authenticationMethod",
+              "@type": "@id",
+              "@container": "@set"
             },
-            capabilityInvocation: {
-              '@id': 'https://w3id.org/security#capabilityInvocationMethod',
-              '@type': '@id',
-              '@container': '@set'
+            "capabilityInvocation": {
+              "@id": "https://w3id.org/security#capabilityInvocationMethod",
+              "@type": "@id",
+              "@container": "@set"
             },
-            capabilityDelegation: {
-              '@id': 'https://w3id.org/security#capabilityDelegationMethod',
-              '@type': '@id',
-              '@container': '@set'
+            "capabilityDelegation": {
+              "@id": "https://w3id.org/security#capabilityDelegationMethod",
+              "@type": "@id",
+              "@container": "@set"
             },
-            keyAgreement: {
-              '@id': 'https://w3id.org/security#keyAgreementMethod',
-              '@type': '@id',
-              '@container': '@set'
+            "keyAgreement": {
+              "@id": "https://w3id.org/security#keyAgreementMethod",
+              "@type": "@id",
+              "@container": "@set"
             }
           }
         },
-        cryptosuite: 'https://w3id.org/security#cryptosuite',
-        proofValue: {
-          '@id': 'https://w3id.org/security#proofValue',
-          '@type': 'https://w3id.org/security#multibase'
+        "cryptosuite": {
+          "@id": "https://w3id.org/security#cryptosuite",
+          "@type": "https://w3id.org/security#cryptosuiteString"
         },
-        verificationMethod: {
-          '@id': 'https://w3id.org/security#verificationMethod',
-          '@type': '@id'
+        "proofValue": {
+          "@id": "https://w3id.org/security#proofValue",
+          "@type": "https://w3id.org/security#multibase"
+        },
+        "verificationMethod": {
+          "@id": "https://w3id.org/security#verificationMethod",
+          "@type": "@id"
         }
       }
     }
   }
-};
+}
+/* eslint-disable quotes, quote-props, max-len */
+;
