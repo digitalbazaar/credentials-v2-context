@@ -50,7 +50,7 @@
     "webpack-cli": "^5.1.4"
   },
   "engines": {
-    "node": ">=16"
+    "node": ">=18"
   },
   "scripts": {
     "build": "npm run clean && npm run serialize && webpack && rollup -c",

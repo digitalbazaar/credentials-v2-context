@@ -26,7 +26,7 @@ See also (related specs):
 
 ## Install
 
-Requires Node.js 16+
+Requires Node.js 18+
 
 To install via NPM:
 
