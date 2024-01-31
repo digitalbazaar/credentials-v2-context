@@ -78,12 +78,20 @@ module.exports =
       "@id": "https://www.w3.org/2018/credentials#digestSRI",
       "@type": "https://www.w3.org/2018/credentials#sriString"
     },
+    "digestMultibase": {
+      "@id": "https://w3id.org/security#digestMultibase",
+      "@type": "https://w3id.org/security#multibase"
+    },
+
     "mediaType": {
       "@id": "https://schema.org/encodingFormat"
     },
 
     "description": "https://schema.org/description",
     "name": "https://schema.org/name",
+
+    "EnvelopedVerifiableCredential":
+      "https://www.w3.org/2018/credentials#EnvelopedVerifiableCredential",
 
     "VerifiableCredential": {
       "@id": "https://www.w3.org/2018/credentials#VerifiableCredential",
@@ -105,6 +113,7 @@ module.exports =
           "@id": "https://www.w3.org/2018/credentials#credentialSubject",
           "@type": "@id"
         },
+        "description": "https://schema.org/description",
         "evidence": {
           "@id": "https://www.w3.org/2018/credentials#evidence",
           "@type": "@id"
@@ -121,6 +130,7 @@ module.exports =
           "@id": "https://www.w3.org/2018/credentials#issuer",
           "@type": "@id"
         },
+        "name": "https://schema.org/name",
         "proof": {
           "@id": "https://w3id.org/security#proof",
           "@type": "@id",
@@ -191,12 +201,10 @@ module.exports =
       }
     },
 
-    "StatusList2021Credential":
-      "https://w3id.org/vc/status-list#StatusList2021Credential",
+    "BitstringStatusListCredential": "https://www.w3.org/ns/credentials/status#BitstringStatusListCredential",
 
-    "StatusList2021": {
-      "@id":
-        "https://w3id.org/vc/status-list#StatusList2021",
+    "BitstringStatusList": {
+      "@id": "https://www.w3.org/ns/credentials/status#BitstringStatusList",
       "@context": {
         "@protected": true,
 
@@ -204,14 +212,30 @@ module.exports =
         "type": "@type",
 
         "statusPurpose":
-          "https://w3id.org/vc/status-list#statusPurpose",
-        "encodedList": "https://w3id.org/vc/status-list#encodedList"
+          "https://www.w3.org/ns/credentials/status#statusPurpose",
+        "encodedList":
+          "https://www.w3.org/ns/credentials/status#encodedList",
+        "ttl": "https://www.w3.org/ns/credentials/status#ttl",
+        "statusReference": "https://www.w3.org/ns/credentials/status#statusReference",
+        "statusSize": "https://www.w3.org/ns/credentials/status#statusSize",
+        "statusMessage": {
+          "@id": "https://www.w3.org/ns/credentials/status#statusMessage",
+          "@context": {
+            "@protected": true,
+
+            "id": "@id",
+            "type": "@type",
+
+            "status": "https://www.w3.org/ns/credentials/status#status",
+            "message": "https://www.w3.org/ns/credentials/status#message"
+          }
+        }
       }
     },
 
-    "StatusList2021Entry": {
+    "BitstringStatusListEntry": {
       "@id":
-        "https://w3id.org/vc/status-list#StatusList2021Entry",
+        "https://www.w3.org/ns/credentials/status#BitstringStatusListEntry",
       "@context": {
         "@protected": true,
 
@@ -219,12 +243,12 @@ module.exports =
         "type": "@type",
 
         "statusPurpose":
-          "https://w3id.org/vc/status-list#statusPurpose",
+          "https://www.w3.org/ns/credentials/status#statusPurpose",
         "statusListIndex":
-          "https://w3id.org/vc/status-list#statusListIndex",
+          "https://www.w3.org/ns/credentials/status#statusListIndex",
         "statusListCredential": {
           "@id":
-            "https://w3id.org/vc/status-list#statusListCredential",
+            "https://www.w3.org/ns/credentials/status#statusListCredential",
           "@type": "@id"
         }
       }
