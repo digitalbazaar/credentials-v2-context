@@ -1,7 +1,6 @@
 # Verifiable Credentials Context for JavaScript _(@digitalbazaar/credentials-v2-context)_
 
-[![Build status](https://img.shields.io/github/workflow/status/digitalbazaar/credentials-v2-context/Node.js%20CI)](https://github.com/digitalbazaar/credentials-v2-context/actions?query=workflow%3A%22Node.js+CI%22)
-[![Coverage status](https://img.shields.io/codecov/c/github/digitalbazaar/credentials-v2-context)](https://codecov.io/gh/digitalbazaar/credentials-v2-context)
+[![Build Status](https://img.shields.io/github/actions/workflow/status/digitalbazaar/credentials-v2-context/main.yml)](https://github.com/digitalbazaar/credentials-v2-context/actions/workflow/main.yml)
 [![NPM Version](https://img.shields.io/npm/v/@digitalbazaar/credentials-v2-context.svg)](https://npm.im/@digitalbazaar/credentials-v2-context)
 
 > A Verifiable Credentials v2 context library for JavaScript.
