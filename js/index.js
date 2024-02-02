@@ -1,22 +1,26 @@
 /*!
- * Copyright (c) 2023 Digital Bazaar, Inc. All rights reserved.
+ * Copyright (c) 2023-2024 Digital Bazaar, Inc. All rights reserved.
  */
-'use strict';
+import context from './context.js';
 
-const context = require('./context');
-const constants = require('./constants');
-const {CONTEXT_URL, CBORLD_VALUE} = constants;
-
-const contexts = new Map();
-contexts.set(CONTEXT_URL, context);
-
-const appContextMap = new Map();
-appContextMap.set(CONTEXT_URL, CBORLD_VALUE);
-
-module.exports = {
-  constants,
-  contexts,
-  appContextMap,
-  CONTEXT_URL,
-  CONTEXT: context
+export const constants = {
+  // default context output filename under ./contexts/
+  CONTEXT_FILENAME: 'credentials-v2.jsonld',
+  // default context well known URL id
+  CONTEXT_URL: 'https://www.w3.org/ns/credentials/v2',
+  // default context CBOR-LD codec id
+  // value between 0x0 and 0x7FFF for globally registered term codec values
+  // or >= 0x8000 for app-specific local terms
+  CBORLD_VALUE: 0x0
 };
+
+// map of all context URLs to context data
+export const contexts = new Map();
+contexts.set(constants.CONTEXT_URL, context);
+
+// map of all context URLs to CBOR-LD codec ids
+export const appContextMap = new Map();
+appContextMap.set(constants.CONTEXT_URL, constants.CBORLD_VALUE);
+
+export const CONTEXT = context;
+export const CONTEXT_URL = constants.CONTEXT_URL;
