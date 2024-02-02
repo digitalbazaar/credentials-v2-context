@@ -1,6 +1,7 @@
 # @digitalbazaar/credentials-v2-context ChangeLog
 
-## 1.0.0 - 2023-01-??
+## 1.0.0 - 2024-02-??
 
 ### Added
-- Release initial version of context.
+- Initial version.
+- See git for earlier history.

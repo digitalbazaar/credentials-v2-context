@@ -1,3 +1,7 @@
+# Library snapshot
+package-lock.json
+yarn.lock
+
 # Logs
 logs
 *.log
@@ -106,3 +110,6 @@ dist
 # Editor files
 *~
 *.sw[nop]
+
+# VSCode
+.vscode

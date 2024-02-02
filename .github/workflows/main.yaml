@@ -40,7 +40,6 @@ jobs:
     strategy:
       matrix:
         node-version: [20.x]
-        bundler: [webpack]
     steps:
     - uses: actions/checkout@v4
     - name: Use Node.js ${{ matrix.node-version }}
@@ -50,6 +49,4 @@ jobs:
     - name: Install
       run: npm install
     - name: Run karma tests
-      env:
-        BUNDLER: ${{ matrix.bundler }}
       run: npm run test-karma
