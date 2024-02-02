@@ -5,9 +5,10 @@
   "main": "js/index.js",
   "module": "./dist/context.esm.js",
   "files": [
-    "contexts",
-    "dist/context.js",
-    "js"
+    "contexts/**/*.jsonld",
+    "dist/**/*.LICENSE.txt",
+    "dist/**/*.js",
+    "js/**/*.js"
   ],
   "repository": {
     "type": "git",
