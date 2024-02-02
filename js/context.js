@@ -184,10 +184,10 @@ module.exports =
       }
     },
 
-    "JsonSchemaCredential": "https://w3.org/2018/credentials#JsonSchemaCredential",
+    "JsonSchemaCredential": "https://www.w3.org/2018/credentials#JsonSchemaCredential",
 
     "JsonSchema": {
-      "@id": "https://w3.org/2018/credentials#JsonSchema",
+      "@id": "https://www.w3.org/2018/credentials#JsonSchema",
       "@context": {
         "@protected": true,
 
@@ -195,7 +195,7 @@ module.exports =
         "type": "@type",
 
         "jsonSchema": {
-          "@id": "https://w3.org/2018/credentials#jsonSchema",
+          "@id": "https://www.w3.org/2018/credentials#jsonSchema",
           "@type": "@json"
         }
       }
