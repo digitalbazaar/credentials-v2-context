@@ -1,20 +1,11 @@
 /*!
- * Copyright (c) 2023 Digital Bazaar, Inc. All rights reserved.
+ * Copyright (c) 2023-2024 Digital Bazaar, Inc. All rights reserved.
  */
-'use strict';
-module.exports = {
+export default {
   output: {
     libraryTarget: 'commonjs',
-    filename: 'context.js'
+    filename: 'main.cjs'
   },
   mode: 'production',
-  entry: './js/index.js',
-  module: {
-    rules: [
-      {
-        test: /\.jsonld$/,
-        loader: 'json-loader'
-      }
-    ]
-  }
+  entry: './js/index.js'
 };

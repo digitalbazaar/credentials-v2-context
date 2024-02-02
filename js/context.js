@@ -1,11 +1,12 @@
 /*!
- * Copyright (c) 2023 Digital Bazaar, Inc. All rights reserved.
+ * Copyright (c) 2023-2024 Digital Bazaar, Inc. All rights reserved.
  */
-'use strict';
+// Use JSON style for context
+/* eslint quotes: ['error', 'double'] */
+/* eslint quote-props: ['error', 'always'] */
+/* eslint-disable max-len */
 
-module.exports =
-/* inline JSON context */
-/* eslint-disable quotes, quote-props, max-len */
+export default
 {
   "@context": {
     "@protected": true,
@@ -326,6 +327,4 @@ module.exports =
       }
     }
   }
-}
-/* eslint-disable quotes, quote-props, max-len */
-;
+};
