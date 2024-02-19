@@ -84,7 +84,7 @@ export default
       "@type": "https://w3id.org/security#multibase"
     },
 
-    "mediaType": {
+    "encodingFormat": {
       "@id": "https://schema.org/encodingFormat"
     },
 
