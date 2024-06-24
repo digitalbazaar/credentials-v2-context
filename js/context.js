@@ -84,7 +84,7 @@ export default
       "@type": "https://w3id.org/security#multibase"
     },
 
-    "encodingFormat": {
+    "mediaType": {
       "@id": "https://schema.org/encodingFormat"
     },
 
@@ -93,6 +93,9 @@ export default
 
     "EnvelopedVerifiableCredential":
       "https://www.w3.org/2018/credentials#EnvelopedVerifiableCredential",
+
+    "EnvelopedVerifiablePresentation":
+      "https://www.w3.org/2018/credentials#EnvelopedVerifiablePresentation",
 
     "VerifiableCredential": {
       "@id": "https://www.w3.org/2018/credentials#VerifiableCredential",
@@ -163,6 +166,7 @@ export default
 
         "id": "@id",
         "type": "@type",
+
         "holder": {
           "@id": "https://www.w3.org/2018/credentials#holder",
           "@type": "@id"
@@ -219,8 +223,14 @@ export default
           "@type": "https://w3id.org/security#multibase"
         },
         "ttl": "https://www.w3.org/ns/credentials/status#ttl",
-        "statusReference": "https://www.w3.org/ns/credentials/status#statusReference",
-        "statusSize": "https://www.w3.org/ns/credentials/status#statusSize",
+        "statusReference": {
+          "@id": "https://www.w3.org/ns/credentials/status#statusReference",
+          "@type": "@id"
+        },
+        "statusSize": {
+          "@id": "https://www.w3.org/ns/credentials/status#statusSize",
+          "@type": "https://www.w3.org/2001/XMLSchema#positiveInteger"
+        },
         "statusMessage": {
           "@id": "https://www.w3.org/ns/credentials/status#statusMessage",
           "@context": {
