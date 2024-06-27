@@ -69,7 +69,8 @@ export default
       "@id": "https://www.iana.org/assignments/jwt#_sd_alg"
     },
     "_sd": {
-      "@id": "https://www.iana.org/assignments/jwt#_sd"
+      "@id": "https://www.iana.org/assignments/jwt#_sd",
+      "@type": "@json"
     },
     "...": {
       "@id": "https://www.iana.org/assignments/jwt#..."
