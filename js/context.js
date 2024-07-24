@@ -10,7 +10,6 @@ export default
 {
   "@context": {
     "@protected": true,
-    "@vocab": "https://www.w3.org/ns/credentials/issuer-dependent#",
 
     "id": "@id",
     "type": "@type",
